@@ -1,0 +1,13 @@
+syntax = "proto3";
+package test;
+option go_package = "./test";
+message Req {
+}
+message Reply {
+}
+service Test {
+    rpc TransIn (Req) returns (Reply);
+    rpc TransInCompensate (Req) returns (Reply);
+    rpc TransOut (Req) returns (Reply);
+    rpc TransOutCompensate (Req) returns (Reply);
+}
